@@ -1,5 +1,10 @@
 package evgenyt.springdemo;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
 public class MusicPlayer {
     private Music music;
     private String name;

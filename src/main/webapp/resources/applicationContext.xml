@@ -8,15 +8,13 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="musicBean" class="evgenyt.springdemo.ClassicalMusic" />
-    <!-- Singleton scope -->
-    <bean id="musicPlayer" class="evgenyt.springdemo.MusicPlayer">
-        <constructor-arg ref="musicBean" />
-    </bean>
-    <!-- Prototype scope -->
+    <context:component-scan base-package="evgenyt.springdemo" />
+    <!-- Prototype scope if not use annotations
     <bean id="musicPlayerPrototype" class="evgenyt.springdemo.MusicPlayer"
         scope="prototype">
         <constructor-arg ref="musicBean" />
     </bean>
+    -->
 
 </beans>
 
